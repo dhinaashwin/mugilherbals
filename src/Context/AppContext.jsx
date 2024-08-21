@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
   // Fetch items from the API
   const fetchItems = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/items');
+      const response = await fetch('https://admin-server-mugil-herbals.vercel.app/api/items');
       const data = await response.json();
       setItems(data);
     } catch (error) {
