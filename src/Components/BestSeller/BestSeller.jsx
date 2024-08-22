@@ -44,9 +44,6 @@ const BestSeller = () => {
           }}
           controlsStrategy="alternate"
           disableDotsControls
-          autoPlay
-          autoPlayInterval={3000}
-          infinite
         />
       </div>
     </section>
