@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
   // Fetch items from the API
   const fetchItems = async () => {
     try {
-      const response = await fetch('https://server-22aug-demo.vercel.app/items');
+      const response = await fetch('https://server-22aug-demo.vercel.app/items', { mode: 'no-cors' });
       const data = await response.json();
       setItems(data);
     } catch (error) {
