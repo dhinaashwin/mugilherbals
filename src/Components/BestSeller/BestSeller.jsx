@@ -20,7 +20,7 @@ const BestSeller = () => {
         <h2 className="md:text-[20px] sm:text-[18px] font-bold mb-2 text-center">{item.name}</h2>
         <p className="md:text-[14px] sm:text-[12px] mb-2 text-center">{item.description}</p>
         <p className="md:text-[19px] sm:text-[17px] font-semibold text-center">
-          ${item.newPrice.toFixed(2)}
+          ${item.newPrice}
         </p>
         <div className="flex justify-center mt-4">
           <button className="bg-[#2E2532] text-white px-6 py-2 rounded-lg font-semibold md:text-[15px] sm:text-[14px]">
