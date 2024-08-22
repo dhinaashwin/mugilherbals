@@ -7,10 +7,14 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [items, setItems] = useState([]);
 
-  // Fetch items from the API
   const fetchItems = async () => {
     try {
-      const response = await fetch('https://server-22aug-demo.vercel.app/items', { mode: 'no-cors' });
+      const response = await fetch('https://server-22aug-demo.vercel.app/items');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
       const data = await response.json();
       setItems(data);
     } catch (error) {
