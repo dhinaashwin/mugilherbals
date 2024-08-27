@@ -36,15 +36,21 @@ const BestSeller = () => {
       <div className="md:container md:mx-auto md:px-20">
         <h1 className="text-2xl font-bold mb-4 text-center">Best Seller</h1>
         <AliceCarousel
-          items={carouselItems}
-          responsive={{
-            0: { items: 1.5 },
-            576: { items: 2.5 },
-            820: { items: 3.5 },
-          }}
-          controlsStrategy="alternate"
-          disableDotsControls
-        />
+  items={carouselItems}
+  responsive={{
+    0: { items: 1.5 },
+    576: { items: 2.5 },
+    820: { items: 3.5 },
+    1024: { items: 4 },
+  }}
+  controlsStrategy="responsive"
+  disableDotsControls
+  disableButtonsControls={false} // Enable control buttons
+  autoPlay
+  autoPlayInterval={2000} // Carousel will autoplay every 2 seconds
+  infinite
+  mouseTracking
+/>
       </div>
     </section>
   );

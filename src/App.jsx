@@ -4,6 +4,7 @@ import './App.css'
 import Hero from './Components/Hero/Hero';
 import HomePage from './Pages/HomePage';
 import { AppProvider } from './Context/AppContext';
+import Login from './Pages/Login';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Navbar />
       <Routes>
            <Route path="/" element = {<HomePage/>}/>
-
+             <Route path="/login" element = {<Login/> }/>
       </Routes>
     </Router>
     </AppProvider>
